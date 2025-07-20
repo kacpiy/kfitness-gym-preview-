@@ -1,0 +1,116 @@
+[
+  {
+    "location": {
+      "id": 1,
+      "name": "GLUBCZYCE_1",
+      "address": "ul. Kościusszki 3C",
+      "city": "Głubczyce",
+      "country": "Poland"
+    },
+    "readers": [
+      {
+        "name": "CZYTNIK_DRZWI",
+        "type": "door",
+        "direction": "",
+        "ip": "192.168.8.14",
+        "mac": "801F127CA604",
+        "lcd": true,
+        "lcdTimer": null,
+        "lcdShowTime": 4000,
+        "bl": 0,
+        "api": null,
+        "actions": [] 
+      },
+      {
+        "name": "CZYTNIK_BRAMKA_WEJSCIE",
+        "type": "gate",
+        "direction": "in",
+        "ip": "192.168.8.13",
+        "mac": "801F127B87A6",
+        "lcd": false,
+        "lcdTimer": null,
+        "lcdShowTime": -1,
+        "bl": -1,
+        "api": null,
+        "actions": [
+          {
+            "name": ["gate-entry"],
+            "relay_no": 1
+          }
+        ]
+      },
+      {
+        "name": "CZYTNIK_BRAMKA_WYJSCIE",
+        "type": "gate",
+        "direction": "out",
+        "ip": "192.168.8.12",
+        "mac": "801F123F0C46",
+        "lcd": false,
+        "lcdTimer": null,
+        "lcdShowTime": -1,
+        "bl": -1,
+        "api": null,
+        "actions": [
+          {
+            "name": ["door-entry", "door-exit"],
+            "relay_no": 2
+          },
+          {
+            "name": ["gate-exit"],
+            "relay_no": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "location": {
+      "id": 2,
+      "name": "GLOGOWEK_1",
+      "address": "ul. Piotra Skargi 6",
+      "city": "Głubczyce",
+      "country": "Poland"
+    },
+    "readers": [
+      {
+        "name": "CZYTNIK_DRZWI",
+        "type": "door",
+        "direction": "",
+        "ip": "192.168.1.12",
+        "mac": "6827199FE30B",
+        "lcd": true,
+        "lcdTimer": null,
+        "lcdShowTime": 4000,
+        "bl": 0,
+        "api": null,
+        "actions": [ {
+            "name": ["door-entry", "door-exit"],
+            "relay_no": 1
+          }
+        ]
+      },
+      {
+        "name": "CZYTNIK_BRAMKA",
+        "type": "gate",
+        "direction": "in-out",
+        "ip": "192.168.1.13",
+        "mac": "E8EB1B489862",
+        "lcd": true,
+        "lcdTimer": null,
+        "lcdShowTime": 7000,
+        "bl": 1,
+        "api": null,
+        "actions": [
+          {
+            "name": ["gate-entry"],
+            "relay_no": 1
+          },
+          {
+            "name": ["gate-exit"],
+            "relay_no": 2
+          }
+        ]
+      }
+    ]
+  }
+]
